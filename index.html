@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shrushti Bafna Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      display: flex;
+      flex-direction: row;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    .left-section {
+      background-color: #5d9282;
+      color: white;
+      padding: 2rem;
+      width: 35%;
+      text-align: center;
+    }
+    .left-section img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .profile, .contact {
+      margin-bottom: 2rem;
+    }
+    .profile h2, .contact h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .right-section {
+      padding: 2rem;
+      width: 65%;
+      background-color: #fff3ef;
+      transition: background-color 0.3s ease;
+    }
+    .right-section:hover {
+      background-color: #fbe6dd;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .section h3 {
+      margin-bottom: 0.5rem;
+      color: #5d9282;
+      font-weight: 600;
+    }
+    .toggle-btn {
+      margin: 1rem 0;
+      padding: 0.5rem 1rem;
+      background-color: #5d9282;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .toggle-btn:hover {
+      background-color: #467264;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="left-section">
+    <img src="Profile.jpeg" alt=" Shrushti's Profile Photo">
+    <div class="profile">
+      <h2>PROFILE</h2>
+      <p>IIM B DBE student.<br>
+      I consider myself a responsible and orderly person.<br>
+      I am looking forward to my first work experience.</p>
+    </div>
+    <div class="contact">
+      <h2>CONTACT ME</h2>
+      <p>📞 9823290464</p>
+      <p>📧 shrushtib24@iimb.ac.in</p>
+      <p>📍 gangapur road, Nashik, Maharashtra,India 422013</p>
+    </div>
+  </div>
+  <div class="right-section">
+    <h1>SHRUSHTI BAFNA</h1>
+    <li>Student</li>
+
+    <button class="toggle-btn" onclick="Section('education')">Education</button>
+    <div class="section" id="education">
+      <h3>EDUCATION</h3>
+      <li><strong>ICAI</strong><br>CA Foundation, in progress.</li>
+      <li><strong>IIMB DBE</strong><br>in progress</li>
+    </div>
+
+    <button class="toggle-btn" onclick="Section('language')"> Language</button>
+    <div class="section" id="language">
+      <h3>LANGUAGE</h3>
+      <li>Hindi</li>
+      <li>English</li>
+    </div>
+
+    <button class="toggle-btn" onclick="Section('skills')">Computer Skills</button>
+    <div class="section" id="skills">
+      <h3>COMPUTER SKILLS</h3>
+      <ul>
+        <li>Text processor</li>
+        <li>Spreadsheet</li>
+        <li>Slide presentation</li>
+      </ul>
+    </div>
+
+    <button class="toggle-btn" onclick="Section('volunteer')"> Volunteer Experience</button>
+    <div class="section" id="volunteer">
+      <h3>VOLUNTEER EXPERIENCE</h3>
+      <li><strong>RETRO CLUB</strong><br>
+      Participation in all kinds of social work.</li>
+    </div>
+  </div>
+
+  <script>
+    function Section(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
